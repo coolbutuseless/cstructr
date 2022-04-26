@@ -19,6 +19,7 @@ library(cstructr)
 
 <!-- badges: start -->
 ![](https://img.shields.io/badge/cool-useless-green.svg)
+[![R-CMD-check](https://github.com/coolbutuseless/cstructr/workflows/R-CMD-check/badge.svg)](https://github.com/coolbutuseless/cstructr/actions)
 <!-- badges: end -->
 
 `{cstructr}` is a demonstration package illustrating how a C struct may be

@@ -6,6 +6,7 @@
 <!-- badges: start -->
 
 ![](https://img.shields.io/badge/cool-useless-green.svg)
+[![R-CMD-check](https://github.com/coolbutuseless/cstructr/workflows/R-CMD-check/badge.svg)](https://github.com/coolbutuseless/cstructr/actions)
 <!-- badges: end -->
 
 `{cstructr}` is a demonstration package illustrating how a C struct may
@@ -70,8 +71,8 @@ rm(mycstruct)
 gc()
 #> MyCStruct finalizer called to free the C pointer memory
 #>           used (Mb) gc trigger (Mb) limit (Mb) max used (Mb)
-#> Ncells  544954 29.2    1223177 65.4         NA   667668 35.7
-#> Vcells 1015387  7.8    8388608 64.0      16384  1824692 14.0
+#> Ncells  544955 29.2    1223172 65.4         NA   667682 35.7
+#> Vcells 1015427  7.8    8388608 64.0      16384  1824783 14.0
 ```
 
 Create multiple structs at once
