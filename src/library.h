@@ -1,0 +1,2 @@
+
+double multiply(MyCStruct *mycstruct);
