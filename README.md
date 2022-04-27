@@ -71,8 +71,8 @@ rm(mycstruct)
 gc()
 #> MyCStruct finalizer called to free the C pointer memory
 #>           used (Mb) gc trigger (Mb) limit (Mb) max used (Mb)
-#> Ncells  544955 29.2    1223172 65.4         NA   667682 35.7
-#> Vcells 1015427  7.8    8388608 64.0      16384  1824783 14.0
+#> Ncells  544954 29.2    1223188 65.4         NA   667645 35.7
+#> Vcells 1015419  7.8    8388608 64.0      16384  1824525 14.0
 ```
 
 Create multiple structs at once

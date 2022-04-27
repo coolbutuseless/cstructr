@@ -33,6 +33,10 @@ SEXP MyCStruct_to_external_ptr(MyCStruct mycstruct) {
   MyCStruct *mycstruct_copy;
   mycstruct_copy = calloc(1, sizeof(MyCStruct));
 
+  if (mycstruct_copy == NULL) {
+    error("MyCStruct_to_external_ptr(): calloc() failed");
+  }
+
   memcpy(mycstruct_copy, (void *)&mycstruct, sizeof(MyCStruct));
 
   SEXP res_ = PROTECT(R_MakeExternalPtr(mycstruct_copy, R_NilValue, R_NilValue));
@@ -102,6 +106,10 @@ MyCStruct *list_of_external_ptrs_to_MyCStruct_array_ptr(SEXP list_) {
   }
 
   MyCStruct *array = calloc(N, sizeof(MyCStruct));
+
+  if (array == NULL) {
+    error("list_of_external_ptrs_to_MyCStruct_array_ptr(): calloc() failed");
+  }
 
   for (int i=0; i<N; i++) {
     MyCStruct *tmp = external_ptr_to_MyCStruct_ptr(VECTOR_ELT(list_, i));

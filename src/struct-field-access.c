@@ -96,6 +96,10 @@ SEXP MyCStruct_copy_(SEXP mycstruct_) {
   MyCStruct *orig = external_ptr_to_MyCStruct_ptr(mycstruct_);
   MyCStruct *copy = calloc(1, sizeof(MyCStruct));
 
+  if (copy == NULL) {
+    error("MyCStruct_copy_(): calloc() failed");
+  }
+
   memcpy(copy, orig, sizeof(MyCStruct));
 
   return MyCStruct_ptr_to_external_ptr(copy);
